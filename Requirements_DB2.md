@@ -56,7 +56,7 @@ When replicating from IBM Db2 for i using mirroring or synchronization, three tr
 ![](Syniti\images\log_type.png)
 
 In the Wizard\
-![](Syniti\images\image2.png)
+![](\Syniti\images\image2.png)
 
 
 For all three modes, you first need to:
