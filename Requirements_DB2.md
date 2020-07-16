@@ -53,10 +53,11 @@ When replicating from IBM Db2 for i using mirroring or synchronization, three tr
 3. Log Reader API
    > **Note**: The Log Reader API is required when replicating tables with LOB values. Log Reader API option is available for Db2 for i V6R1 and above
 
-![](Syniti\images\log_type.png)
+![](Syniti/images/log_type.png)
 
-In the Wizard\
-![](\Syniti\images\image2.png)
+In the Wizard
+
+![](Syniti/images/image2.PNG)
 
 
 For all three modes, you first need to:
