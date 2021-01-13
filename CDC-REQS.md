@@ -117,6 +117,8 @@ You can enable full supplemental logging for individual tables or all tables in 
 ## Task 3. Create a User Account
 Create a user account to use with the Oracle CDC Client origin. You need the account to access the database through JDBC.
 
+`cdc_user` was created in July for `GLSAGABO` for this purpose. But a new user with another name can also be used.
+
 You create accounts differently based on the Oracle version that you use:
 <!-- 
 **Oracle 12c, 18c, or 19c multitenant databases**
