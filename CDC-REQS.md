@@ -1,13 +1,13 @@
 Created by: J.Murray\
 Date: 1st July 2020
-1. - [x] Firewalls configured in Azure 
+<!-- 1. - [x] Firewalls configured in Azure 
 2. - [x] VMs in Azure with access to OCI and DB2/AS400 (DONE)
 3. POC using
    1. - [ ] GoldenGate
    2. - [x] Syniti
    3. - [x] Streamsets (Opensource)
-   4. - [x] Talend Cloud Data Integration 
-# ORACLE (CDC)
+   4. - [x] Talend Cloud Data Integration  -->
+# ORACLE (CDC) for Streamsets Requirements
 ## Option A - Using Oracle LogMiner
 The Oracle CDC Client processes change data capture (CDC) information provided by Oracle LogMiner redo logs. Use Oracle CDC Client to process data from Oracle 11g, 12c, 18c, or 19c.
 You might use this origin to perform database replication. You can use a separate pipeline with the JDBC Query Consumer or JDBC Multitable Consumer origin to read existing data. Then start a pipeline with the Oracle CDC Client origin to process subsequent changes.
@@ -25,7 +25,7 @@ The following tasks required:
 2. Enable supplemental logging for the database or tables.
 3. Create a user account with the required roles and privileges to access LOGMNR_LOGS
 4. To use the dictionary in redo logs, extract the Log Miner dictionary.
-5. Install the Oracle JDBC driver.
+<!-- 5. Install the Oracle JDBC driver. -->
 
 ## Task 1. Enable LogMiner
 LogMiner provides redo logs that summarize database activity. The origin uses these logs to generate records.
@@ -219,7 +219,7 @@ To extract the dictionary for Oracle 12c, 18c, or 19c multitenant databases, run
 ALTER SESSION SET CONTAINER=cdb$root;
 EXECUTE DBMS_LOGMNR_D.BUILD(OPTIONS=> DBMS_LOGMNR_D.STORE_IN_REDO_LOGS);
 ```
-## Task 5. Install the Driver
+<!-- ## Task 5. Install the Driver
 The Oracle CDC Client origin connects to Oracle through JDBC. You cannot access the database until you install the required driver.
 
 > **Note**: StreamSets has tested the origin with Oracle 11g and 19c with the Oracle 11.2.0 JDBC driver.
@@ -234,4 +234,4 @@ Redo logs - Use redo logs when table structures are expected to change. When rea
 Important: When using the dictionary in redo logs, make sure to extract the latest dictionary to the redo logs each time table structures change. For more information, see Task 4. Extract a Log Miner Dictionary (Redo Logs).
 Note that using the dictionary in redo logs can have significantly higher latency than using the dictionary in the online catalog. But using the online catalog does not allow for schema changes.
 
-For more information about dictionary options and configuring LogMiner, see the Oracle LogMiner documentation.
+For more information about dictionary options and configuring LogMiner, see the Oracle LogMiner documentation. -->
