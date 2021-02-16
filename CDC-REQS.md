@@ -2,12 +2,12 @@ Created by: J.Murray\
 Date: 1st July 2020
 <!-- 1. - [x] Firewalls configured in Azure 
 2. - [x] VMs in Azure with access to OCI and DB2/AS400 (DONE)
-3. POC using
+3. These instructions apply to following CDC Softwares:
    1. - [ ] GoldenGate
    2. - [x] Syniti
    3. - [x] Streamsets (Opensource)
-   4. - [x] Talend Cloud Data Integration  -->
-# ORACLE (CDC) for Streamsets Requirements
+   4. - [ ] Talend Cloud Data Integration  -->
+# ORACLE (CDC) for Streamsets/Syniti Requirements
 ## Option A - Using Oracle LogMiner
 The Oracle CDC Client processes change data capture (CDC) information provided by Oracle LogMiner redo logs. Use Oracle CDC Client to process data from Oracle 11g, 12c, 18c, or 19c.
 You might use this origin to perform database replication. You can use a separate pipeline with the JDBC Query Consumer or JDBC Multitable Consumer origin to read existing data. Then start a pipeline with the Oracle CDC Client origin to process subsequent changes.
@@ -117,7 +117,8 @@ You can enable full supplemental logging for individual tables or all tables in 
 ## Task 3. Create a User Account
 Create a user account to use with the Oracle CDC Client origin. You need the account to access the database through JDBC.
 
-`cdc_user` was created in July for `GLSAGABO` for this purpose. But a new user with another name can also be used.
+`cdc_user` and `striim` were created in July for `GLSAGABO` for this purpose. But a new user with another name can also be used.
+Please make sure if you create a new user account, delete the old users `cdc_user` and `striim`, only 1 user account is required.
 
 You create accounts differently based on the Oracle version that you use:
 <!-- 
